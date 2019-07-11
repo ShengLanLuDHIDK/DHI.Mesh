@@ -24,12 +24,12 @@ steps:
   displayName: 'dotnet restore'
   inputs:
     command: restore
-    projects: '**/*.csproj'
+    projects: '**/DHI.Mesh.csproj'
     
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
-    projects: '**/*.csproj'
+    projects: '**/DHI.Mesh.csproj'
     arguments: '--configuration $(BuildConfiguration) --no-restore'
 
 - task: DotNetCoreCLI@2
